@@ -40,16 +40,21 @@ namespace SimpleException
             else
             {
                 CurrentSpeed += delta;
-                if (CurrentSpeed > MaXSpeed)
+                if (CurrentSpeed >= MaXSpeed)
                 {
-                    Console.WriteLine($"{PetName} has overheated!");
+                    //Console.WriteLine($"{PetName} has overheated!");
                     CurrentSpeed = 0;
+
                     _carIsDead = true;
+
+                    //создать и сконфигурировать новый экземпляр класса System.Exception
+                    throw new Exception($"{PetName} has overheated!");
+                    //}
+                    //else
+                    //{
                 }
-                else
-                {
                     Console.WriteLine($"=> CurrentSpeed = {CurrentSpeed}");
-                }
+                
             }
         }
 

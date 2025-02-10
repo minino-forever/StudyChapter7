@@ -11,11 +11,23 @@
             Car myCar = new Car("Zippe", 20);
 
             myCar.CrankTunes(true);
+            try
+            {
 
             for (int i = 0; i < 10; i++)
             {
                 myCar.Accelerate(10);
             }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\n ****Error!****");
+                Console.WriteLine($"Method: {ex.TargetSite}");
+                Console.WriteLine($"Message: {ex.Message}");
+                Console.WriteLine($"Sourse: {ex.Source}");
+            }
+
+            Console.WriteLine("\n ****** Out of exception logic *****");
         }
     }
 }
