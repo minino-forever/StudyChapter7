@@ -58,5 +58,14 @@ namespace SimpleException
             }
         }
 
+
+        public void iterationArrCar(string[] carArray)
+        {
+            if (carArray.Length >1)
+            {
+                throw new Exception("Your's arraay very very small for my programm!!!!!");
+            }
+        }
+
     }
 }

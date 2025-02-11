@@ -14,10 +14,10 @@
             try
             {
 
-            for (int i = 0; i < 10; i++)
-            {
-                myCar.Accelerate(10);
-            }
+                for (int i = 0; i < 10; i++)
+                 {
+                  myCar.Accelerate(10);
+                 }
             }
             catch (Exception ex)
             {
@@ -26,6 +26,22 @@
                 Console.WriteLine($"Message: {ex.Message}");
                 Console.WriteLine($"Sourse: {ex.Source}");
             }
+
+            CarArray array = new CarArray();
+            try
+            {
+            myCar.iterationArrCar(array.arrCar);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("\n ****Error!****");
+                Console.WriteLine($"Method: {ex.TargetSite}");
+                Console.WriteLine($"Message: {ex.Message}");
+                Console.WriteLine($"Sourse: {ex.Source}");
+            }
+            
+
 
             Console.WriteLine("\n ****** Out of exception logic *****");
         }
